@@ -20,28 +20,7 @@ full_load = True
 
 # In[2]:
 
-
-# corpus = ' '.join([
-#     'he is a king',
-#     'she is a queen',
-#     'he is a man',
-#     'she is a woman',
-#     'warsaw is poland capital',
-#     'berlin is germany capital',
-#     'paris is france capital',
-# ])
-# print(corpus)
-
 def get_corpus_details(file_name="../abc_corpus.txt", window_size=2, min_freq=1):
-#     corpus = ' '.join([
-#         'he is a king',
-#         'she is a queen',
-#         'he is a man',
-#         'she is a woman',
-#         'warsaw is poland capital',
-#         'berlin is germany capital',
-#         'paris is france capital',
-#     ])
     corpus = open(file_name, encoding="utf8").read()
     corpus = ''.join([i if i not in string.punctuation else ' ' for i in corpus.lower()])
     stop_words = set(stopwords.words('english'))
